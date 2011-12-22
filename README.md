@@ -73,6 +73,8 @@ Return error messages in a JSON dictionary with the key error, value an arbitary
 Todo
 ----
 
+Should we just use http://syncable.org/ ?
+
 Make it use the right MUST type words from RFCs to be clear what is compulsory.
 
 
