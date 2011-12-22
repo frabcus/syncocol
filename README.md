@@ -58,6 +58,18 @@ they end \_lat and \_lng. e.g.
 </pre>
 
 
+Errors
+------
+
+Return error messages in a JSON dictionary with the key error, value an arbitary string.
+
+<pre>
+{
+    error: "Datastore timed out"
+}
+</pre>
+
+
 Todo
 ----
 
