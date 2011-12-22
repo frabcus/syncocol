@@ -33,6 +33,9 @@ JSON representing part of the transaction log of changes to the tabular data.
 Data format
 -----------
 
+TODO: What are the keys in the data table? Can they have just ASCII or any UTF-8, 
+and can they have whitespace? We suspect we'll have to allow anything.
+
 The values in the data dictionary must be one of these types:
 
 * Strings, in quotes
@@ -41,6 +44,12 @@ The values in the data dictionary must be one of these types:
 
 TODO: Something about latitude/longitude? Not something recursive, but a
 convention saying do something like "start\_lat, start\_lon"
+
+
+Todo
+----
+
+Make it use the right MUST type words from RFCs to be clear what is compulsory.
 
 
 
