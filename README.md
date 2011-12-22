@@ -7,7 +7,7 @@ A proposed simple specification for syncing tabular data via JSON transaction lo
 HTTP endpoint
 -------------
 
-XXX todo
+TODO
 
 
 Wire protocol
@@ -20,7 +20,8 @@ JSON representing part of the transaction log of changes to the tabular data.
     seq: 10, 
     id: "07acde3002cb1f62a08de5469160b912", 
     deleted: false, 
-    data: { first_name: "Ryan", last_name: "Pitts", employer: "The Spokesman-Review" } }
+    data: { first_name: "Ryan", last_name: "Pitts", employer: "The Spokesman-Review" } 
+}
 </pre>
 
 * seq - the sequence in the transaction log
@@ -32,11 +33,15 @@ JSON representing part of the transaction log of changes to the tabular data.
 Data format
 -----------
 
-Just strings, integers or floats in normal Javascript.
+The values in the data dictionary must be one of these types:
 
-XXX dates
+* Strings, in quotes
+* Numbers, integers or floats
+* Dates, a string containing an ISO 8601 date or date/time. Only in UTC no timezones.
 
-XXX lat/lng?
+TODO: Something about latitude/longitude? Not something recursive, but a
+convention saying do something like "start\_lat, start\_lon"
+
 
 
 
