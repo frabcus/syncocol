@@ -1,7 +1,7 @@
 Syncocol
 ========
 
-A proposed simple specification for syncing tabular data via JSON transaction logs.
+A proposed simple specification for syncing tabular data over HTTP via JSON transaction logs.
 
 
 HTTP endpoint
