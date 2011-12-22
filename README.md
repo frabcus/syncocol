@@ -33,17 +33,23 @@ JSON representing part of the transaction log of changes to the tabular data.
 Data format
 -----------
 
-TODO: What are the keys in the data table? Can they have just ASCII or any UTF-8, 
-and can they have whitespace? We suspect we'll have to allow anything.
+*Keys* in the data dictionary can be any string, with any UTF-8 character, or
+whitespace in them. To meet JSON specificaiton, they must be quoted if not 
+simple like a variable name.
 
-The values in the data dictionary must be one of these types:
+Note that as it is JSON, the keys can be in any order and change order.
+
+*Values* in the data dictionary must be one of these types:
 
 * Strings, in quotes
 * Numbers, integers or floats
 * Dates, a string containing an ISO 8601 date or date/time. Only in UTC no timezones.
 
-TODO: Something about latitude/longitude? Not something recursive, but a
-convention saying do something like "start\_lat, start\_lon"
+Optional - by convention name variables storing WGS 84 latitude/longitude so
+they end \_lat and \_lng. e.g. 
+<pre>
+    data: { city: "Liverpool", centre_lat: 53.4, centre_lng: -3 }
+</pre>
 
 
 Todo
