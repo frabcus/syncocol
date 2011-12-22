@@ -7,7 +7,12 @@ A proposed simple specification for syncing tabular data via JSON transaction lo
 HTTP endpoint
 -------------
 
-TODO
+Can be any URL, and is a GET request.
+
+There are some extra URL parameters that a client can include:
+* since - seq id to start at, returns everything after that, defaults to the start
+* limit - maximum number of changes to return, defaults to unlimited XXX can a server optionally limit this to a maximum?
+* include\_data - if present and false, the wire protocol's data field isn't included
 
 
 Wire protocol
@@ -27,7 +32,7 @@ JSON representing part of the transaction log of changes to the tabular data.
 * seq - the sequence in the transaction log
 * id - unique identifier of the row
 * deleted - if present and true, means the row is being deleted by the transaction
-* data - new data for the row, should not be present if deleted is true
+* data - new data for the row, should not be present if deleted is true (also see include\_data in the HTTP endpoint section)
 
 
 Data format
