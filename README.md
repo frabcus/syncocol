@@ -33,13 +33,13 @@ JSON representing part of the transaction log of changes to the tabular data.
 Data format
 -----------
 
-*Keys* in the data dictionary can be any string, with any UTF-8 character, or
+**Keys** in the data dictionary can be any string, with any UTF-8 character, or
 whitespace in them. To meet JSON specificaiton, they must be quoted if not 
 simple like a variable name.
 
 Note that as it is JSON, the keys can be in any order and change order.
 
-*Values* in the data dictionary must be one of these types:
+**Values** in the data dictionary must be one of these types:
 
 * Strings, in quotes
 * Numbers, integers or floats
